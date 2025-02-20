@@ -32,7 +32,7 @@ function Footer() {
             <Modal isOpen={modalOpened} onClose={() => setModalOpened(false)}>
                 <div className='text-2xl'>Gracias por estar aquí</div>
                 <p>Sígueme en mis redes sociales para apoyar lo que hago 😁</p>
-                <div className='flex gap-2 justify-center items-center mt-2'>
+                <div className='flex flex-wrap gap-2 justify-center items-center mt-2'>
                     <div hidden className='text-blue-700 text-red-700 text-pink-700'></div>
                     <Card>
                         <a target='_blank' className='flex gap-1 items-center justify-center' href="https://github.com/Alanpro204">
