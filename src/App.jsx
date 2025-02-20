@@ -5,6 +5,7 @@ import axios from 'axios'
 import { ToastContainer } from 'react-toastify'
 import { toast } from 'react-toastify'
 import { Turnstile } from '@marsidev/react-turnstile'
+import Footer from './Footer'
 
 const url = import.meta.env.VITE_APP_URL || "http://localhost:3000/"
 const siteKey = import.meta.env.VITE_APP_SITE_KEY
@@ -49,7 +50,7 @@ function App() {
 
   return (
     <div className='mx-4'>
-      <section className='w-full h-screen flex mx-auto flex-col items-center mt-4'>
+      <section className='w-full h-screen flex mx-auto flex-col items-center mt-4 mb-52'>
         <form className='flex flex-col max-w-2xl  gap-4' onSubmit={handleSubmit(submit)}>
           <h1 className='text-3xl text-center'>
             Generador de Imágenes <br /> <span className='gradient-text font-bold text-4xl'>Gratis</span></h1>
@@ -71,7 +72,7 @@ function App() {
                 <div className='w-fit mx-auto flex flex-col gap-2'>
                   <button disabled className='w-fit mx-auto px-12 shadow-gray-400 p-2 shadow rounded-md bg-gray-200'>Generar</button>
                   <Turnstile
-                    className='mt-4'
+                    className='mt-4 block'
                     siteKey={siteKey}  // Reemplaza con tu Site Key real
                     onSuccess={handleTurnstileSuccess}
                     onError={handleTurnstileError}
@@ -88,6 +89,9 @@ function App() {
           }
         </form>
       </section>
+      <div>
+        <Footer />
+      </div>
       <ToastContainer position='bottom-right' />
     </div>
   )
