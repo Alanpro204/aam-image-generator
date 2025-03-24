@@ -97,7 +97,7 @@ function App() {
             </div>
             <div>
               <div className='flex flex-col gap-1 w-80'>
-                <textarea placeholder='Describa la imagen que desea generar...' className='bg-white resize-none focus:outline-0 focus:shadow-gray-600 shadow-gray-400 transition-all shadow p-4 rounded-md h-56' {...register("prompt", { required: true })}></textarea>
+                <textarea spellCheck={false} placeholder='Describa la imagen que desea generar...' className='bg-white resize-none focus:outline-0 focus:shadow-gray-600 shadow-gray-400 transition-all shadow p-4 rounded-md h-56' {...register("prompt", { required: true })}></textarea>
               </div>
               <div className='w-fit mx-auto flex flex-col gap-2 mt-2'>
                 {
